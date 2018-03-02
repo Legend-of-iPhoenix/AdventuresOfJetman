@@ -21,6 +21,7 @@ var character = new function() {
 				}
 			}
 		}
+
 		object.printStats();
 	}
 	this.handleVelocityChange = function(deltaX,deltaY) {
@@ -37,11 +38,12 @@ var character = new function() {
 		});
 	}
 	this.startTicking = function(object) {
-		setInterval(object.tick,50,object);
+		setInterval(object.tick,100,object);
 	}
 }
 
 window.onload = function() {
+	var canvas = document.getElementByID("canvas");
 	character.startTicking(character)
 	document.body.onkeyup = function(e) {
 		if (e.code == 'KeyW' || e.code == 'ArrowUp') {
