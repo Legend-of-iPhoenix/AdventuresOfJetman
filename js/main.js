@@ -1,3 +1,5 @@
+var canvas, context;
+
 var character = new function() {
 	this.velocityX = 0;
 	this.velocityY = 0;
@@ -43,7 +45,8 @@ var character = new function() {
 }
 
 window.onload = function() {
-	var canvas = document.getElementById("canvas");
+	canvas = document.getElementById("canvas");
+	context = canvas.getContext('2d');
 	character.startTicking(character)
 	document.body.onkeyup = function(e) {
 		if (e.code == 'KeyW' || e.code == 'ArrowUp') {
