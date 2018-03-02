@@ -43,7 +43,7 @@ var character = new function() {
 }
 
 window.onload = function() {
-	var canvas = document.getElementByID("canvas");
+	var canvas = document.getElementById("canvas");
 	character.startTicking(character)
 	document.body.onkeyup = function(e) {
 		if (e.code == 'KeyW' || e.code == 'ArrowUp') {
