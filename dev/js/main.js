@@ -90,6 +90,7 @@ itemsList = [new Item(0,0,2)];
 
 
 window.onload = function() {
+	scale = (!isNaN(parseInt(location.search.substring(1)))?parseInt(location.search.substring(1)):10) || 10;
 	canvas = document.createElement("canvas");
 	document.body.appendChild(canvas);
 	canvas.width = 264*scale;
