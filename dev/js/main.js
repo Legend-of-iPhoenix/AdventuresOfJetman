@@ -68,7 +68,7 @@ Character.prototype.handleVelocityChange = function(deltaX,deltaY) {
 }
 
 Character.prototype.startTicking = function(context) {
-	console.log(this);
+	console.log(context);
 	var x = setInterval(this.tick,75,context);
 	this.tickInterval = function() {
 		return x;
